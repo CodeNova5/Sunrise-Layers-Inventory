@@ -1,12 +1,12 @@
-export const companyName = "GreenFeather Farms";
-export const appTitle = "G.F.F";
-export const appDescription = "G.F.F inventory management system";
+export const companyName = "Sunrise Layers";
+export const appTitle = "Sunrise Layers inventory";
+export const appDescription = "Sunrise Layers inventory management system";
 export const companyRegion = "Lagos";
 export const companyCountry = "Nigeria";
 export const companyStreetAddress = "Adjacent azkol Oil, langbasa road, Ajah";
 export const companyAddress = `${companyStreetAddress}, ${companyRegion}, ${companyCountry}`;
 export const companyPhoneNumber = "+2349090060060";
-export const companyEmail = "modautocare@gmail.com";
+export const companyEmail = "codenova02@gmail.com";
 export const companyVatId = "123456789";
 
 export type Permissions = {
