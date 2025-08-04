@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato");
+@import url("https://fonts.googleapis.com/css2?family=Nunito");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand");
+@import url("https://fonts.googleapis.com/css2?family=Rambla");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+
+    /* Primary: Prussian Blue */
+    --pri-100: #f2f6ff;
+    --pri-200: #b4ccfd;
+    --pri-300: #70a0ec;
+    --pri-400: #2d6dbe;
+    --pri-500: #003366;
+    --pri-600: #003056;
+    --pri-700: #002b46;
+    --pri-800: #002536;
+    --pri-900: #001c26;
+
+    /* Accent: Robot Grendizer Gold */
+    --acc-100: #fcfff2;
+    --acc-200: #f3ffbc;
+    --acc-300: #eefc84;
+    --acc-400: #ebf54d;
+    --acc-500: #e8e817;
+    --acc-600: #b8ad08;
+    --acc-700: #877802;
+    --acc-800: #574800;
+    --acc-900: #050505;
+
+    /* Neutral */
+    --neu-100: #fafbfc;
+    --neu-200: #eaecee;
+    --neu-300: #dbdde0;
+    --neu-400: #cccfd2;
+    --neu-500: #bcc0c4;
+    --neu-600: #94999d;
+    --neu-700: #6d7275;
+    --neu-800: #474c4e;
+    --neu-900: #222526;
+    --body: "Lato", sans-serif;
+    --heading: "Quicksand", sans-serif;
+    --progress: #ddd;
+    --red-light: rgb(236, 183, 183);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* --foreground-rgb: 255, 255, 255; */
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
+
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--neu-300) transparent;
+  }
+
+  /* For Webkit browsers */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--neu-300);
+    border-radius: 20px;
+    border: 3px solid transparent;
+  }
+
+  .active-nav {
+    color: white;
+    background: var(--pri-600);
+  }
+
+  .rambla-regular {
+    font-family: "Rambla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .rambla-bold {
+    font-family: "Rambla", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .rambla-regular-italic {
+    font-family: "Rambla", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .rambla-bold-italic {
+    font-family: "Rambla", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .safe-container {
+    padding-top: env(safe-area-inset-top, 20px);
+    padding-right: env(safe-area-inset-right, 20px);
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+    padding-left: env(safe-area-inset-left, 20px);
+  }
+
+  .bborder {
+    border-bottom-color: white;
+    border-bottom-width: 2px;
+  }
+
+  .tab {
+    letter-spacing: 0.0015em;
+    font-size: 1.15em;
+    color: var(--pri-800);
+    text-shadow: 0 0.23px var(--pri-300), -0.23px 0 var(--pri-100),
+      -0.23px 0.46px var(--pri-300), -0.46px 0.23px var(--pri-100),
+      -0.46px 0.69px var(--pri-300), -0.69px 0.46px var(--pri-100),
+      -0.69px 0.92px var(--pri-300), -0.92px 0.69px var(--pri-100),
+      -0.92px 1.15px var(--pri-300), -1.15px 0.92px var(--pri-100),
+      -1.15px 1.38px var(--pri-300), -1.38px 1.15px var(--pri-100),
+      -1.38px 1.61px var(--pri-300), -1.61px 1.38px var(--pri-100),
+      -1.61px 1.84px var(--pri-300), -1.84px 1.61px var(--pri-100);
+    text-align: center;
+  }
+
+  .tab::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--pri-400);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    left: 0;
+    border-radius: 50px;
+  }
+  .drawer > button.drawer-btn {
+    display: none;
+  }
+  @media (max-width: 1024px) {
+    .drawer {
+      position: fixed;
+      bottom: 3px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .drawer-hidden {
+      transform: translateX(100%);
+    }
+    .drawer > button.drawer-btn {
+      display: inline-flex;
+    }
+  }
+
+  /* Drawer button styles */
+
+  .loader {
+    border: 4px solid var(--pri-600);
+    border-left-color: transparent;
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    animation: spin89345 1s linear infinite;
+  }
+
+  @keyframes spin89345 {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .origami-background {
+    background: repeating-linear-gradient(
+      135deg,
+      var(--acc-200),
+      var(--pri-100) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+  }
+  .progress-bar {
+    background: repeating-linear-gradient(
+      to right,
+      var(--progress),
+      var(--progress) 3px,
+      white 3px,
+      white 6px
+    );
+    background-size: 100% 100%;
+  }
+  .perspective {
+    perspective: 1000px;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .card-inner:hover {
+    transform: rotateY(180deg);
+  }
+}

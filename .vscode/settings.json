@@ -1,0 +1,13 @@
+{
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features",
+        "tailwindCSS.suggestions": true,
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "npm.packageManager": "npm",
+}

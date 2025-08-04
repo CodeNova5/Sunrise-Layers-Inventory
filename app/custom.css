@@ -1,0 +1,20 @@
+/* Define your custom scrollbar styles */
+.scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--pri-800) var(--pri-500);
+  }
+  
+  /* For Webkit browsers */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: var(--pri-500);
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--pri-800) ;
+    border-radius: 20px;
+    border: 3px solid var(--pri-500);
+  }
