@@ -248,7 +248,7 @@ export default function Inventory({
             />
           )}
 
-          <div className="flex flex-col gap-2 px-2 py-4">
+          <div className="flex flex-col gap-2 px-2 py-4 pb-10">
             {sections.map((section) => (
               <div key={section.name} className="mb-2">
                 <button
