@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+=======
+# Sunrise-Layers-Inventory-
+Sunrise Layers Inventory is a modern, full-featured inventory and business operations management system built with Next.js The platform provides a comprehensive suite of tools for managing inventory, orders, products, staff, roles, permissions, payments, invoices, receipts, and more—all within a clean, responsive, and user-friendly interface.
+>>>>>>> 9ab5f102f77200798f289238a6d55862f19479b4
